@@ -7,26 +7,56 @@
     <link rel="stylesheet" href="styles/layoutCSS/styles.css">
 </head>
 <body>
-    <div class="board">
-        <div class="player">
-            <h2>Opponent</h2>
-            <div class="active-card card">Active Card</div>
-            <div class="bench">
-                <div class="card">Bench Card 1</div>
-                <div class="card">Bench Card 2</div>
-                <div class="card">Bench Card 3</div>
+    <main class="game-board" role="main" aria-label="Card game board">
+        <!-- Opponent section (top of board) -->
+        <section class="opponent" aria-label="Opponent's play area">
+            <h2 class="opponent__title">Opponent</h2>
+            
+            <div class="opponent__play-area">
+                <div class="opponent__active" role="region" aria-label="Opponent's active card">
+                    <div class="card card--active card--opponent">
+                        <div class="card__content">Active Card</div>
+                    </div>
+                </div>
+                
+                <div class="opponent__bench" role="region" aria-label="Opponent's bench cards">
+                    <div class="card card--bench card--opponent">
+                        <div class="card__content">Bench 1</div>
+                    </div>
+                    <div class="card card--bench card--opponent">
+                        <div class="card__content">Bench 2</div>
+                    </div>
+                    <div class="card card--bench card--opponent">
+                        <div class="card__content">Bench 3</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
         
-        <div class="player">
-            <h2>Player</h2>
-            <div class="active-card card">Active Card</div>
-            <div class="bench">
-                <div class="card">Bench Card 1</div>
-                <div class="card">Bench Card 2</div>
-                <div class="card">Bench Card 3</div>
+        <!-- Player section (bottom of board) -->
+        <section class="player" aria-label="Player's play area">
+            <div class="player__play-area">
+                <div class="player__bench" role="region" aria-label="Player's bench cards">
+                    <div class="card card--bench card--player">
+                        <div class="card__content">Bench 1</div>
+                    </div>
+                    <div class="card card--bench card--player">
+                        <div class="card__content">Bench 2</div>
+                    </div>
+                    <div class="card card--bench card--player">
+                        <div class="card__content">Bench 3</div>
+                    </div>
+                </div>
+                
+                <div class="player__active" role="region" aria-label="Player's active card">
+                    <div class="card card--active card--player">
+                        <div class="card__content">Active Card</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+            
+            <h2 class="player__title">Player</h2>
+        </section>
+    </main>
 </body>
 </html>

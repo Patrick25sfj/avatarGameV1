@@ -1,3 +1,55 @@
+/* ============================================
+   CSS Variables for Easy Theming
+   Modify these to change sizes, colors, spacing
+   ============================================ */
+:root {
+    /* Card dimensions - mobile first */
+    --card-width-active: 140px;
+    --card-height-active: 190px;
+    --card-width-bench: 90px;
+    --card-height-bench: 120px;
+    
+    /* Spacing */
+    --gap-bench: 10px;
+    --gap-sections: 30px;
+    --card-border-radius: 10px;
+    
+    /* Colors - easy to theme */
+    --color-board-bg: #2c3e50;
+    --color-card-bg: #ffffff;
+    --color-card-border: #34495e;
+    --color-player-accent: #3498db;
+    --color-opponent-accent: #e74c3c;
+    --color-text: #2c3e50;
+}
+
+/* Tablet and up - scale cards larger */
+@media (min-width: 640px) {
+    :root {
+        --card-width-active: 160px;
+        --card-height-active: 220px;
+        --card-width-bench: 110px;
+        --card-height-bench: 150px;
+        --gap-bench: 15px;
+        --gap-sections: 50px;
+    }
+}
+
+/* Desktop - maximum card sizes */
+@media (min-width: 1024px) {
+    :root {
+        --card-width-active: 180px;
+        --card-height-active: 250px;
+        --card-width-bench: 130px;
+        --card-height-bench: 180px;
+        --gap-bench: 20px;
+        --gap-sections: 60px;
+    }
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -5,68 +57,213 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: var(--color-board-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    background: #f5f5f5;
 }
 
-.board {
+/* ============================================
+   Game Board Layout
+   ============================================ */
+.game-board {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-between;
+    gap: var(--gap-sections);
+    padding: 20px 10px;
 }
 
+/* ============================================
+   Player/Opponent Sections
+   ============================================ */
+.opponent,
 .player {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-
-.player h2 {
-    font-size: 1.5rem;
-}
-
-.active-card {
-    margin-bottom: 10px;
-}
-
-.bench {
-    display: flex;
-    justify-content: center;
     gap: 15px;
 }
 
+.opponent__title,
+.player__title {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #ecf0f1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   Play Area Layout (Active + Bench)
+   Uses CSS Grid for precise positioning
+   ============================================ */
+.opponent__play-area,
+.player__play-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+/* Opponent: Active card on top, bench below */
+.opponent__play-area {
+    grid-template-areas: 
+        "active"
+        "bench";
+}
+
+.opponent__active {
+    grid-area: active;
+}
+
+.opponent__bench {
+    grid-area: bench;
+}
+
+/* Player: Bench on top, active card below (reversed for visual balance) */
+.player__play-area {
+    grid-template-areas: 
+        "bench"
+        "active";
+}
+
+.player__active {
+    grid-area: active;
+}
+
+.player__bench {
+    grid-area: bench;
+}
+
+/* ============================================
+   Bench Cards Layout
+   Flexbox for horizontal arrangement with wrapping
+   ============================================ */
+.opponent__bench,
+.player__bench {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-bench);
+    flex-wrap: wrap; /* Prevents overlap on very narrow screens */
+    max-width: 100%;
+}
+
+/* ============================================
+   Card Styles
+   ============================================ */
 .card {
-    width: 120px;
-    height: 160px;
-    border: 2px solid #333;
-    border-radius: 8px;
-    background: white;
+    border: 3px solid var(--color-card-border);
+    border-radius: var(--card-border-radius);
+    background: var(--color-card-bg);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+/* Active cards - larger and centered */
+.card--active {
+    width: var(--card-width-active);
+    height: var(--card-height-active);
+    border-width: 4px;
+    z-index: 2; /* Ensure active card is on top */
+}
+
+/* Bench cards - smaller */
+.card--bench {
+    width: var(--card-width-bench);
+    height: var(--card-height-bench);
+    opacity: 0.95;
+}
+
+/* ============================================
+   Card Facing Direction (Visual Mirroring)
+   Opponent cards face down, Player cards face up
+   ============================================ */
+.card--opponent.card--active {
+    transform: scaleX(-1); /* Mirror horizontally */
+    border-color: var(--color-opponent-accent);
+}
+
+.card--player.card--active {
+    border-color: var(--color-player-accent);
+}
+
+/* Content needs to be flipped back inside mirrored cards */
+.card--opponent .card__content {
+    transform: scaleX(-1);
+}
+
+/* ============================================
+   Card Content
+   Add .card__art, .card__stats, etc. for game elements
+   ============================================ */
+.card__content {
     padding: 10px;
+    text-align: center;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    color: var(--color-text);
+    font-weight: 600;
 }
 
-@media (min-width: 768px) {
-    .board {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
 
-@media (max-width: 480px) {
-    .bench {
-        flex-wrap: wrap;
+/* Very small screens - ensure cards don't break layout */
+@media (max-width: 360px) {
+    .opponent__bench,
+    .player__bench {
+        gap: 6px;
     }
     
-    .card {
-        width: 100px;
-        height: 140px;
-        font-size: 0.9rem;
+    .game-board {
+        padding: 15px 5px;
     }
 }
+
+/* Landscape orientation - adjust spacing */
+@media (orientation: landscape) and (max-height: 600px) {
+    .game-board {
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .opponent__play-area,
+    .player__play-area {
+        gap: 10px;
+    }
+}
+
+/* ============================================
+   THEMING GUIDE (comments for extension)
+   
+   To add card types (e.g., fire, water):
+   .card--fire { border-color: #ff6b6b; }
+   .card--water { border-color: #4ecdc4; }
+   
+   To add hover effects:
+   .card:hover { transform: translateY(-5px); }
+   
+   To add card art:
+   .card__art { width: 100%; height: 60%; }
+   
+   To add health/stats:
+   .card__stats { position: absolute; top: 5px; right: 5px; }
+   
+   To style based on card state:
+   .card--exhausted { opacity: 0.5; filter: grayscale(1); }
+   .card--selected { box-shadow: 0 0 20px var(--color-player-accent); }
+   ============================================ */
