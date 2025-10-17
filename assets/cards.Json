@@ -1,0 +1,314 @@
+{
+  "cards": [
+    {
+      "id": "card_001",
+      "name": "Aang - Avatar State",
+      "type": "air",
+      "damage": 95,
+      "hp": 120,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Air Manipulation: Deal 10 additional damage to fire types",
+      "specialAbility": "Avatar State: Once per game, restore 50 HP and deal 120 damage to all opponents"
+    },
+    {
+      "id": "card_002",
+      "name": "Katara - Master Waterbender",
+      "type": "water",
+      "damage": 75,
+      "hp": 95,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Healing Waters: Restore 20 HP each turn",
+      "specialAbility": "Bloodbending: Take control of an enemy card for one turn during full moon phases"
+    },
+    {
+      "id": "card_003",
+      "name": "Toph - The Blind Bandit",
+      "type": "earth",
+      "damage": 85,
+      "hp": 110,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Seismic Sense: Cannot be affected by illusion or stealth abilities",
+      "specialAbility": "Metalbending: Destroy one enemy equipment or defense card"
+    },
+    {
+      "id": "card_004",
+      "name": "Zuko - Fire Lord",
+      "type": "fire",
+      "damage": 90,
+      "hp": 100,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Dragon's Breath: Deal 15 additional damage to earth types",
+      "specialAbility": "Redemption Arc: Increase all ally cards' damage by 20 for two turns"
+    },
+    {
+      "id": "card_005",
+      "name": "Appa - Sky Bison",
+      "type": "air",
+      "damage": 60,
+      "hp": 130,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Flight: Cannot be attacked by earth-type cards"
+    },
+    {
+      "id": "card_006",
+      "name": "Momo - Winged Lemur",
+      "type": "air",
+      "damage": 25,
+      "hp": 40,
+      "rarity": "common",
+      "imageUrl": "",
+      "ability": "Agility: 50% chance to dodge any attack"
+    },
+    {
+      "id": "card_007",
+      "name": "Iroh - Dragon of the West",
+      "type": "fire",
+      "damage": 80,
+      "hp": 105,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Wisdom: Draw an additional card each turn",
+      "specialAbility": "Lightning Redirection: Return 100% of fire damage back to attacker"
+    },
+    {
+      "id": "card_008",
+      "name": "Azula - Princess of Fire",
+      "type": "fire",
+      "damage": 100,
+      "hp": 85,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Blue Flames: Ignore 20 points of enemy defense",
+      "specialAbility": "Lightning Strike: Deal 150 damage but skip next turn"
+    },
+    {
+      "id": "card_009",
+      "name": "Sokka - Warriors",
+      "type": "water",
+      "damage": 55,
+      "hp": 70,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Strategic Mind: Increase all ally water-type damage by 10"
+    },
+    {
+      "id": "card_010",
+      "name": "Suki - Kyoshi Warrior",
+      "type": "earth",
+      "damage": 65,
+      "hp": 75,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Fan Strike: Deal damage equal to opponent's last attack value"
+    },
+    {
+      "id": "card_011",
+      "name": "Bumi - Mad Genius",
+      "type": "earth",
+      "damage": 70,
+      "hp": 90,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Creative Earthbending: Randomly deal between 40-100 damage"
+    },
+    {
+      "id": "card_012",
+      "name": "Combustion Man",
+      "type": "fire",
+      "damage": 110,
+      "hp": 65,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Explosive Shot: Deal damage to target and adjacent cards"
+    },
+    {
+      "id": "card_013",
+      "name": "Ty Lee",
+      "type": "air",
+      "damage": 45,
+      "hp": 60,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Chi Blocking: Disable opponent's ability for one turn"
+    },
+    {
+      "id": "card_014",
+      "name": "Mai",
+      "type": "fire",
+      "damage": 60,
+      "hp": 65,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Throwing Knives: Attack twice with half damage each"
+    },
+    {
+      "id": "card_015",
+      "name": "Pakku - Northern Water Master",
+      "type": "water",
+      "damage": 75,
+      "hp": 85,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Ice Prison: Freeze one enemy card for one turn"
+    },
+    {
+      "id": "card_016",
+      "name": "Hama - The Puppetmaster",
+      "type": "water",
+      "damage": 65,
+      "hp": 70,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Waterbending Master: Drain 15 HP from opponent each turn"
+    },
+    {
+      "id": "card_017",
+      "name": "Jeong Jeong - Fire Deserter",
+      "type": "fire",
+      "damage": 70,
+      "hp": 80,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Wall of Flames: Create a 30 HP shield each turn"
+    },
+    {
+      "id": "card_018",
+      "name": "Ozai - Phoenix King",
+      "type": "fire",
+      "damage": 105,
+      "hp": 110,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Royal Fire: Deal 20 additional damage to all non-fire types",
+      "specialAbility": "Sozin's Comet: Triple damage for one turn, usable once per game"
+    },
+    {
+      "id": "card_019",
+      "name": "Cabbage Merchant",
+      "type": "earth",
+      "damage": 10,
+      "hp": 30,
+      "rarity": "common",
+      "imageUrl": "",
+      "ability": "MY CABBAGES!: When destroyed, deal 40 damage to the attacker"
+    },
+    {
+      "id": "card_020",
+      "name": "Yue - Moon Spirit",
+      "type": "water",
+      "damage": 50,
+      "hp": 100,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Moonlight: All water cards gain +20 HP during night",
+      "specialAbility": "Sacrifice: Destroy this card to fully heal all ally cards"
+    },
+    {
+      "id": "card_021",
+      "name": "Fire Nation Soldier",
+      "type": "fire",
+      "damage": 40,
+      "hp": 50,
+      "rarity": "common",
+      "imageUrl": "",
+      "ability": "Formation: Gain +10 damage for each Fire Nation ally"
+    },
+    {
+      "id": "card_022",
+      "name": "Earth Kingdom Guard",
+      "type": "earth",
+      "damage": 35,
+      "hp": 60,
+      "rarity": "common",
+      "imageUrl": "",
+      "ability": "Rock Armor: Reduce incoming damage by 10"
+    },
+    {
+      "id": "card_023",
+      "name": "Water Tribe Warrior",
+      "type": "water",
+      "damage": 45,
+      "hp": 55,
+      "rarity": "common",
+      "imageUrl": "",
+      "ability": "Tribal Unity: Gain +5 HP for each Water Tribe ally"
+    },
+    {
+      "id": "card_024",
+      "name": "Air Nomad Monk",
+      "type": "air",
+      "damage": 30,
+      "hp": 50,
+      "rarity": "common",
+      "imageUrl": "",
+      "ability": "Peaceful Spirit: Heal 10 HP to all allies at end of turn"
+    },
+    {
+      "id": "card_025",
+      "name": "Roku - Past Avatar",
+      "type": "fire",
+      "damage": 85,
+      "hp": 100,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Past Life: All element types gain +10 damage",
+      "specialAbility": "Spirit World: Cannot be destroyed for two turns, usable once"
+    },
+    {
+      "id": "card_026",
+      "name": "Kyoshi - Earth Avatar",
+      "type": "earth",
+      "damage": 90,
+      "hp": 115,
+      "rarity": "EX",
+      "imageUrl": "",
+      "ability": "Warrior's Spirit: Deal +15 damage when attacking fire types",
+      "specialAbility": "Island Split: Deal 80 damage to all enemies"
+    },
+    {
+      "id": "card_027",
+      "name": "The Boulder",
+      "type": "earth",
+      "damage": 75,
+      "hp": 95,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "The Boulder feels conflicted: Coin flip - heads deals double damage, tails deals half"
+    },
+    {
+      "id": "card_028",
+      "name": "Wan Shi Tong - Spirit Owl",
+      "type": "air",
+      "damage": 65,
+      "hp": 90,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Forbidden Knowledge: View opponent's hand and next card"
+    },
+    {
+      "id": "card_029",
+      "name": "June - Bounty Hunter",
+      "type": "fire",
+      "damage": 60,
+      "hp": 70,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Shirshu Venom: Paralyze target for one turn"
+    },
+    {
+      "id": "card_030",
+      "name": "Piandao - Sword Master",
+      "type": "fire",
+      "damage": 70,
+      "hp": 75,
+      "rarity": "rare",
+      "imageUrl": "",
+      "ability": "Master's Technique: Ignore element advantages"
+    }
+  ]
+}
